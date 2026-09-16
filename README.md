@@ -1,6 +1,6 @@
 # Canvas Personal Archive
 
-[![Test](https://github.com/tianyuf/canvas-personal-archive/actions/workflows/test.yml/badge.svg)](https://github.com/tianyuf/canvas-personal-archive/actions/workflows/test.yml)
+[![Test](https://github.com/tianyuf/canvas-archive/actions/workflows/test.yml/badge.svg)](https://github.com/tianyuf/canvas-archive/actions/workflows/test.yml)
 
 A read-only Canvas LMS exporter and local browser for grades, feedback, submissions, files, discussions, quizzes, and Inbox conversations.
 

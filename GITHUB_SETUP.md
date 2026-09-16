@@ -44,7 +44,7 @@ After reviewing the staged content:
 
 ```bash
 git commit -m "Initial private release"
-gh repo create canvas-personal-archive --private --source=. --remote=origin --push
+gh repo create canvas-archive --private --source=. --remote=origin --push
 ```
 
 The GitHub Actions workflow runs the privacy scanner, Python tests, and JavaScript syntax check after the push.
