@@ -1,5 +1,7 @@
 # Contributing
 
+Use the repository's issue forms for reproducible bugs and focused feature requests. For security vulnerabilities, follow [SECURITY.md](SECURITY.md) instead of opening an issue.
+
 ## Development
 
 The project requires Python 3.10 or newer and has no third-party runtime dependencies.

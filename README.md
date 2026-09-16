@@ -1,8 +1,12 @@
 # Canvas Personal Archive
 
+[![Test](https://github.com/tianyuf/canvas-personal-archive/actions/workflows/test.yml/badge.svg)](https://github.com/tianyuf/canvas-personal-archive/actions/workflows/test.yml)
+
 A read-only Canvas LMS exporter and local browser for grades, feedback, submissions, files, discussions, quizzes, and Inbox conversations.
 
 The project uses only the Python standard library. Exported records remain on your computer and are excluded from Git by default.
+
+[Export](#export-your-data) | [Browse](#browse-an-export) | [Limitations](#limitations) | [Security](SECURITY.md) | [Contributing](CONTRIBUTING.md)
 
 > [!CAUTION]
 > Canvas exports contain private educational records, messages, account identifiers, and signed file URLs. Never commit an export directory or access token, even to a private repository.
@@ -24,6 +28,12 @@ The project uses only the Python standard library. Exported records remain on yo
 - A modern web browser
 
 No Python or JavaScript packages are required.
+
+## Canvas Compatibility
+
+The exporter uses standard Instructure Canvas REST API endpoints and supports institution-hosted, custom-domain, and `instructure.com` Canvas sites. Stanford is only the default host; pass your Canvas root URL with `--base-url` for another institution.
+
+Your institution must permit personal API tokens or provide a compatible bearer token. Institution policies, course retention settings, and Canvas feature availability determine which records the API returns.
 
 ## Create A Canvas Token
 
@@ -134,3 +144,7 @@ web/                        Static HTML, CSS, and JavaScript interface
 ## Security
 
 See [SECURITY.md](SECURITY.md) before reporting a problem. Never attach an export, Canvas token, student record, or signed Canvas URL to a GitHub issue.
+
+## Contributing
+
+Bug reports and feature requests use privacy-aware GitHub issue forms. See [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and use only synthetic Canvas records in tests and examples.

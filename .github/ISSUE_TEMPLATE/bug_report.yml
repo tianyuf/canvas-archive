@@ -1,0 +1,83 @@
+name: Bug report
+description: Report a reproducible problem using synthetic or fully redacted data.
+title: "[Bug]: "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Canvas Personal Archive.
+
+        Do not attach an export, token, screenshot of student records, private course URL, signed download URL, or any other real Canvas data. Use synthetic examples and redact identifiers.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what were you trying to do?
+      placeholder: Describe the problem without including private Canvas data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reproducible sequence using synthetic data where possible.
+      placeholder: |
+        1. Run ...
+        2. Open ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+
+  - type: input
+    id: revision
+    attributes:
+      label: Revision
+      description: Output of `git rev-parse --short HEAD`, or a release tag if one exists.
+      placeholder: abc1234
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python version, and browser if relevant.
+      placeholder: macOS 15, Python 3.13, Firefox 142
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Exporter
+        - Local archive browser
+        - Downloaded files
+        - Documentation or workflow
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy checks
+      options:
+        - label: I have not included real student records, credentials, private URLs, or files from an export.
+          required: true
+        - label: I searched existing issues for this problem.
+          required: true

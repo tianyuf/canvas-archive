@@ -1,0 +1,56 @@
+name: Feature request
+description: Suggest an improvement that preserves the project's local-first, read-only model.
+title: "[Feature]: "
+labels:
+  - enhancement
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the need without sharing real Canvas records, credentials, private URLs, or screenshots containing educational data.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What limitation or use case should this change address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior you would like to see.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Exporter
+        - Local archive browser
+        - Privacy or security
+        - Documentation or workflow
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include any workarounds or other approaches you considered.
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This can remain read-only and local-first.
+          required: true
+        - label: I have not included real Canvas data or credentials.
+          required: true
