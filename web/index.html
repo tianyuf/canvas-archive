@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Canvas Archive</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/courses" aria-label="Canvas Archive home"><span class="brand-mark">C</span>Canvas Archive</a>
+      <nav aria-label="Archive sections">
+        <a data-view="courses" href="#/courses">Courses <i id="nav-course-count">0</i></a>
+        <a data-view="feedback" href="#/feedback">Feedback <i id="nav-feedback-count">0</i></a>
+        <a data-view="files" href="#/files">Files <i id="nav-file-count">0</i></a>
+        <a data-view="inbox" href="#/inbox">Inbox <i id="nav-inbox-count">0</i></a>
+        <a data-view="overview" href="#/overview">Overview</a>
+      </nav>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <label class="search-box">
+          <span class="search-symbol" aria-hidden="true"></span>
+          <input id="global-search" type="search" placeholder="Search courses, assignments, feedback, files, and messages" autocomplete="off" aria-label="Search the archive">
+          <kbd>/</kbd>
+        </label>
+        <div class="sync-state" id="sync-state">
+          <span></span><div><b>Reading archive</b><small>Please wait</small></div>
+        </div>
+        <button class="density-button" id="density-button" type="button">Compact view</button>
+        <button class="refresh-button" id="refresh-button" type="button" aria-label="Refresh archive">Refresh</button>
+      </header>
+      <div id="view" class="view" aria-live="polite">
+        <div class="loading-skeleton" aria-label="Loading archive">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-line"></div>
+          <div class="skeleton-row"></div>
+          <div class="skeleton-row"></div>
+        </div>
+      </div>
+      <footer><span>Canvas Archive</span><span id="footer-archive">Local academic record</span></footer>
+    </main>
+  </div>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
